@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riyas Khan K S | SQL Server DBA | Junior Database Administrator</title>
+  <meta name="description" content="Riyas Khan K S — aspiring SQL Server DBA working with Microsoft SQL Server, T-SQL, database administration, security, and performance monitoring.">
+  <meta name="keywords" content="SQL Server DBA, Junior SQL Server DBA, Junior Database Administrator, SQL Server Database Administrator, Microsoft SQL Server, T-SQL, SSMS, Database Administration, SQL Server Backup and Recovery, SQL Server Performance Monitoring, SQL Server Troubleshooting, Database Security, SQL Server Indexes, SQL Server Statistics, SQL Server Execution Plans, SQL Server DMVs, SQL Server DBA Portfolio, SQL Server Projects, Entry-Level SQL Server DBA">
+  <meta name="author" content="Riyas Khan K S">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://riyaskhan.dev">
+  <meta property="og:title" content="Riyas Khan K S | SQL Server DBA & Junior Database Administrator">
+  <meta property="og:description" content="Aspiring SQL Server DBA specializing in Microsoft SQL Server, T-SQL, database administration, and SQL Server projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://riyaskhan.dev">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Riyas Khan K S | SQL Server DBA & Junior Database Administrator">
+  <meta name="twitter:description" content="Aspiring SQL Server DBA specializing in Microsoft SQL Server, T-SQL, database administration, and SQL Server projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://riyaskhan.dev/#website","url":"https://riyaskhan.dev","name":"Riyas Khan K S | SQL Server DBA | Junior Database Administrator","description":"Portfolio of Riyas Khan K S, an aspiring SQL Server DBA specializing in Microsoft SQL Server, T-SQL, and database administration.","publisher":{"@id":"https://riyaskhan.dev/#person"}},{"@type":"Person","@id":"https://riyaskhan.dev/#person","name":"Riyas Khan K S","jobTitle":"SQL Server DBA | Junior Database Administrator","description":"Aspiring SQL Server DBA and Junior Database Administrator with hands-on project experience in Microsoft SQL Server, T-SQL, database administration, security, backup and recovery, performance monitoring, and troubleshooting.","url":"https://riyaskhan.dev","sameAs":["https://github.com/RiyasKhan-ks","https://linkedin.com/in/riyaskhan-ks"],"alumniOf":{"@type":"EducationalOrganization","name":"Francis Xavier Engineering College, Tirunelveli"},"knowsAbout":["Microsoft SQL Server","T-SQL","SSMS","Database Administration","Database Security","Backup and Recovery","SQL Server Performance Monitoring","SQL Server Troubleshooting","SQL Server Indexes","SQL Server Statistics","SQL Server Execution Plans","SQL Server DMVs","Database Maintenance","Stored Procedures","Transactions"]},{"@type":"ProfilePage","@id":"https://riyaskhan.dev/#profile","url":"https://riyaskhan.dev","mainEntity":{"@id":"https://riyaskhan.dev/#person"}}]}</script>
+  <style>
+    :root { --bg:#FAFAF7; --white:#FFFFFF; --surface:#F3F3EF; --text-primary:#111111; --text-secondary:#666666; --text-muted:#8A8A84; --border:#E5E5E0; --orange:#E86F18; --orange-light:#FF8A3D; --orange-pale:rgba(232,111,24,0.08); --font-display:'Playfair Display',Georgia,serif; --font-body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; --font-mono:'JetBrains Mono','Fira Code',monospace; --ease-out-expo:cubic-bezier(0.16,1,0.3,1); --transition-fast:0.2s var(--ease-out-expo); --transition-medium:0.4s var(--ease-out-expo); --transition-slow:0.8s var(--ease-out-expo); }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; font-size:16px; }
+    body { font-family:var(--font-body); background:var(--bg); color:var(--text-primary); line-height:1.6; overflow-x:hidden; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+    ::selection { background:var(--orange); color:var(--white); }
+    .cursor { position:fixed; width:12px; height:12px; background:var(--orange); border-radius:50%; pointer-events:none; z-index:9999; mix-blend-mode:difference; transition:transform 0.15s var(--ease-out-expo),opacity 0.3s ease; transform:translate(-50%,-50%); }
+    .cursor.hover { transform:translate(-50%,-50%) scale(2.5); opacity:0.6; }
+    .cursor-dot { position:fixed; width:4px; height:4px; background:var(--text-primary); border-radius:50%; pointer-events:none; z-index:10000; transform:translate(-50%,-50%); }
+    @media (pointer:coarse) { .cursor,.cursor-dot { display:none; } }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:var(--bg); }
+    ::-webkit-scrollbar-thumb { background:var(--border); border-radius:3px; }
+    ::-webkit-scrollbar-thumb:hover { background:var(--text-muted); }
+    h1,h2,h3,h4 { font-family:var(--font-display); font-weight:500; line-height:1.1; letter-spacing:-0.02em; }
+    .label { font-family:var(--font-body); font-size:0.7rem; font-weight:600; text-transform:uppercase; letter-spacing:0.15em; color:var(--text-muted); }
+    nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; transition:all var(--transition-medium); }
+    nav.scrolled { background:rgba(250,250,247,0.85); backdrop-filter:blur(20px) saturate(180%); -webkit-backdrop-filter:blur(20px) saturate(180%); border-bottom:1px solid var(--border); padding:1rem 3rem; }
+    .nav-inner { max-width:1400px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
+    .nav-brand { font-family:var(--font-display); font-size:1.1rem; font-weight:600; color:var(--text-primary); text-decoration:none; letter-spacing:-0.01em; }
+    .nav-links { display:flex; gap:2.5rem; align-items:center; list-style:none; }
+    .nav-links a { font-size:0.8rem; font-weight:500; color:var(--text-secondary); text-decoration:none; letter-spacing:0.02em; position:relative; transition:color var(--transition-fast); }
+    .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:1.5px; background:var(--orange); transition:width var(--transition-medium); }
+    .nav-links a:hover { color:var(--text-primary); }
+    .nav-links a:hover::after { width:100%; }
+    .nav-status { display:flex; align-items:center; gap:0.5rem; font-size:0.75rem; color:var(--text-muted); font-weight:500; }
+    .status-dot { width:6px; height:6px; background:var(--orange); border-radius:50%; animation:pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.5; transform:scale(1.2); } }
+    .mobile-menu-btn { display:none; background:none; border:none; cursor:pointer; padding:0.5rem; }
+    .mobile-menu-btn span { display:block; width:24px; height:1.5px; background:var(--text-primary); margin:6px 0; transition:all var(--transition-fast); }
+    .hero { min-height:100vh; display:flex; align-items:center; position:relative; overflow:hidden; padding:8rem 3rem 4rem; }
+    .hero-inner { max-width:1400px; margin:0 auto; width:100%; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+    .hero-content { position:relative; z-index:2; }
+    .hero-label { display:inline-flex; align-items:center; gap:0.75rem; margin-bottom:2rem; opacity:0; animation:fadeUp 1s var(--ease-out-expo) 0.2s forwards; }
+    .hero-label .line { width:40px; height:1px; background:var(--orange); }
+    .hero-name { font-size:clamp(3rem,6vw,5.5rem); font-weight:600; line-height:1.05; letter-spacing:-0.03em; margin-bottom:0.5rem; opacity:0; animation:fadeUp 1s var(--ease-out-expo) 0.4s forwards; }
+    .hero-title { font-family:var(--font-body); font-size:clamp(1.25rem,2.5vw,1.75rem); font-weight:500; color:var(--text-primary); margin-bottom:0.25rem; opacity:0; animation:fadeUp 1s var(--ease-out-expo) 0.5s forwards; }
+    .hero-subtitle { font-size:1rem; font-weight:400; color:var(--text-muted); margin-bottom:2rem; opacity:0; animation:fadeUp 1s var(--ease-out-expo) 0.6s forwards; }
+    .hero-statement { font-family:var(--font-display); font-size:clamp(1.5rem,3vw,2.25rem); font-weight:500; line-height:1.3; color:var(--text-primary); margin-bottom:1.5rem; max-width:540px; opacity:0; animation:fadeUp 1s var(--ease-out-expo) 0.7s forwards; }
+    .hero-statement .accent { color:var(--orange); font-style:italic; }
+    .hero-desc { font-size:1rem; color:var(--text-secondary); max-width:480px; margin-bottom:2.5rem; line-height:1.7; opacity:0; animation:fadeUp 1s var(--ease-out-expo) 0.8s forwards; }
+    .hero-buttons { display:flex; gap:1rem; margin-bottom:2.5rem; opacity:0; animation:fadeUp 1s var(--ease-out-expo) 0.9s forwards; }
+    .btn { display:inline-flex; align-items:center; gap:0.5rem; padding:0.875rem 1.75rem; font-family:var(--font-body); font-size:0.85rem; font-weight:600; letter-spacing:0.02em; text-decoration:none; border-radius:0; cursor:pointer; transition:all var(--transition-fast); position:relative; overflow:hidden; }
+    .btn-primary { background:var(--text-primary); color:var(--white); border:1.5px solid var(--text-primary); }
+    .btn-primary:hover { background:var(--orange); border-color:var(--orange); transform:translateY(-2px); }
+    .btn-secondary { background:transparent; color:var(--text-primary); border:1.5px solid var(--border); }
+    .btn-secondary:hover { border-color:var(--text-primary); transform:translateY(-2px); }
+    .hero-social { display:flex; gap:1.25rem; opacity:0; animation:fadeUp 1s var(--ease-out-expo) 1s forwards; }
+    .hero-social a { font-size:0.8rem; font-weight:500; color:var(--text-muted); text-decoration:none; transition:color var(--transition-fast); position:relative; }
+    .hero-social a::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:var(--orange); transition:width var(--transition-medium); }
+    .hero-social a:hover { color:var(--text-primary); }
+    .hero-social a:hover::after { width:100%; }
+    .hero-visual { position:relative; height:600px; display:flex; align-items:center; justify-content:center; }
+    .abstract-visual { position:relative; width:100%; height:100%; }
+    .data-grid { position:absolute; width:100%; height:100%; background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px); background-size:60px 60px; opacity:0.3; mask-image:radial-gradient(ellipse at center,black 30%,transparent 70%); -webkit-mask-image:radial-gradient(ellipse at center,black 30%,transparent 70%); }
+    .central-geometry { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:200px; height:200px; border:1.5px solid var(--orange); opacity:0.3; animation:rotate 30s linear infinite; }
+    .central-geometry::before { content:''; position:absolute; inset:30px; border:1px solid var(--border); transform:rotate(45deg); }
+    .central-geometry::after { content:''; position:absolute; inset:60px; border:1px solid var(--orange); opacity:0.5; transform:rotate(-15deg); }
+    @keyframes rotate { from { transform:translate(-50%,-50%) rotate(0deg); } to { transform:translate(-50%,-50%) rotate(360deg); } }
+    .floating-label { position:absolute; font-family:var(--font-mono); font-size:0.65rem; color:var(--text-muted); background:var(--white); padding:0.35rem 0.75rem; border:1px solid var(--border); white-space:nowrap; opacity:0; animation:fadeIn 1s var(--ease-out-expo) forwards; }
+    .floating-label:nth-child(3) { top:15%; left:10%; animation-delay:1.2s; }
+    .floating-label:nth-child(4) { top:25%; right:15%; animation-delay:1.4s; }
+    .floating-label:nth-child(5) { bottom:30%; left:20%; animation-delay:1.6s; }
+    .floating-label:nth-child(6) { bottom:20%; right:10%; animation-delay:1.8s; }
+    .floating-label:nth-child(7) { top:50%; left:5%; animation-delay:2s; }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    .scroll-indicator { position:absolute; bottom:2rem; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:0.5rem; opacity:0; animation:fadeUp 1s var(--ease-out-expo) 1.5s forwards; }
+    .scroll-indicator span { font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-muted); }
+    .scroll-line { width:1px; height:40px; background:linear-gradient(to bottom,var(--orange),transparent); animation:scrollPulse 2s ease-in-out infinite; }
+    @keyframes scrollPulse { 0%,100% { opacity:0.3; transform:scaleY(0.5); } 50% { opacity:1; transform:scaleY(1); } }
+    section { padding:8rem 3rem; position:relative; }
+    .section-inner { max-width:1200px; margin:0 auto; }
+    .section-header { margin-bottom:4rem; }
+    .section-header .label { margin-bottom:1rem; display:block; }
+    .section-header h2 { font-size:clamp(2rem,4vw,3rem); font-weight:500; }
+    .reveal { opacity:0; transform:translateY(40px); transition:all 0.8s var(--ease-out-expo); }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
+    .about-text { font-size:1.05rem; line-height:1.8; color:var(--text-secondary); }
+    .about-text p { margin-bottom:1.5rem; }
+    .about-text strong { color:var(--text-primary); font-weight:600; }
+    .about-highlight { background:var(--surface); padding:2rem; border-left:3px solid var(--orange); }
+    .about-highlight .label { margin-bottom:0.75rem; display:block; }
+    .about-highlight h4 { font-family:var(--font-body); font-size:1.1rem; font-weight:600; margin-bottom:0.25rem; }
+    .about-highlight p { font-size:0.9rem; color:var(--text-muted); }
+    .about-meta { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:2rem; }
+    .meta-item .label { margin-bottom:0.25rem; display:block; }
+    .meta-item p { font-weight:600; color:var(--text-primary); font-size:0.95rem; }
+    .skills-container { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
+    .skill-group { background:var(--white); border:1px solid var(--border); padding:2rem; transition:all var(--transition-medium); cursor:default; position:relative; overflow:hidden; }
+    .skill-group::before { content:''; position:absolute; top:0; left:0; width:3px; height:0; background:var(--orange); transition:height var(--transition-medium); }
+    .skill-group:hover { border-color:var(--orange); transform:translateY(-4px); box-shadow:0 20px 40px rgba(0,0,0,0.04); }
+    .skill-group:hover::before { height:100%; }
+    .skill-group h4 { font-family:var(--font-body); font-size:1rem; font-weight:600; margin-bottom:1rem; display:flex; align-items:center; gap:0.75rem; }
+    .skill-group h4 .num { font-family:var(--font-mono); font-size:0.7rem; color:var(--orange); font-weight:500; }
+    .skill-tags { display:flex; flex-wrap:wrap; gap:0.5rem; }
+    .skill-tag { font-size:0.8rem; padding:0.4rem 0.9rem; background:var(--surface); color:var(--text-secondary); border:1px solid var(--border); transition:all var(--transition-fast); }
+    .skill-tag:hover { background:var(--orange-pale); color:var(--orange); border-color:var(--orange); }
+
+    .projects-list { display:flex; flex-direction:column; gap:4rem; }
+    .project-item { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; padding:3rem 0; border-bottom:1px solid var(--border); position:relative; }
+    .project-item:last-child { border-bottom:none; }
+    .project-item:nth-child(even) { direction:rtl; }
+    .project-item:nth-child(even) > * { direction:ltr; }
+    .project-visual { position:relative; background:var(--surface); aspect-ratio:4/3; overflow:hidden; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; }
+    .project-visual-inner { position:relative; width:80%; height:80%; }
+    .project-number { position:absolute; top:-1rem; left:-1rem; font-family:var(--font-display); font-size:6rem; font-weight:700; color:var(--border); line-height:1; z-index:1; transition:color var(--transition-medium); }
+    .project-item:hover .project-number { color:var(--orange); opacity:0.3; }
+    .project-content { position:relative; z-index:2; }
+    .project-content .label { margin-bottom:0.75rem; display:block; }
+    .project-content h3 { font-size:clamp(1.5rem,2.5vw,2rem); margin-bottom:1rem; font-weight:600; }
+    .project-content p { color:var(--text-secondary); line-height:1.7; margin-bottom:1.25rem; font-size:0.95rem; }
+    .project-tech { display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:1.5rem; }
+    .project-tech span { font-family:var(--font-mono); font-size:0.7rem; padding:0.3rem 0.7rem; background:var(--orange-pale); color:var(--orange); border:1px solid rgba(232,111,24,0.2); }
+    .project-link { display:inline-flex; align-items:center; gap:0.5rem; font-size:0.85rem; font-weight:600; color:var(--text-primary); text-decoration:none; position:relative; transition:color var(--transition-fast); }
+    .project-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1.5px; background:var(--orange); transition:width var(--transition-medium); }
+    .project-link:hover { color:var(--orange); }
+    .project-link:hover::after { width:100%; }
+    .project-link svg { transition:transform var(--transition-fast); }
+    .project-link:hover svg { transform:translateX(4px); }
+    .project-badge { display:inline-block; font-size:0.7rem; font-weight:600; padding:0.35rem 0.75rem; background:var(--surface); color:var(--text-muted); border:1px solid var(--border); margin-top:0.75rem; }
+    .code-section { background:var(--white); border:1px solid var(--border); }
+    .code-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:1.5rem; }
+    .code-block { background:var(--bg); border:1px solid var(--border); overflow:hidden; transition:all var(--transition-medium); }
+    .code-block:hover { border-color:var(--orange); transform:translateY(-2px); }
+    .code-header { display:flex; align-items:center; justify-content:space-between; padding:0.75rem 1rem; background:var(--white); border-bottom:1px solid var(--border); }
+    .code-header span { font-family:var(--font-mono); font-size:0.7rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em; }
+    .copy-btn { background:none; border:none; font-family:var(--font-body); font-size:0.7rem; color:var(--text-muted); cursor:pointer; padding:0.25rem 0.5rem; transition:color var(--transition-fast); }
+    .copy-btn:hover { color:var(--orange); }
+    .copy-btn.copied { color:var(--orange); }
+    .code-content { padding:1.25rem; font-family:var(--font-mono); font-size:0.8rem; line-height:1.7; overflow-x:auto; white-space:pre; color:var(--text-secondary); }
+    .code-keyword { color:#0066cc; font-weight:500; }
+    .code-function { color:var(--orange); }
+    .code-string { color:#2d7a3e; }
+    .code-comment { color:var(--text-muted); font-style:italic; }
+    .code-number { color:#b35900; }
+    .journey-track { position:relative; padding:2rem 0; }
+    .journey-line { position:absolute; top:50%; left:0; right:0; height:1px; background:var(--border); z-index:0; }
+    .journey-line-progress { position:absolute; top:0; left:0; height:100%; background:linear-gradient(90deg,var(--orange),var(--orange-light)); width:0%; transition:width 1.5s var(--ease-out-expo); }
+    .journey-steps { display:flex; justify-content:space-between; position:relative; z-index:1; }
+    .journey-step { text-align:center; flex:1; position:relative; }
+    .step-dot { width:14px; height:14px; background:var(--white); border:2px solid var(--border); border-radius:50%; margin:0 auto 1rem; transition:all var(--transition-medium); position:relative; }
+    .step-dot::after { content:''; position:absolute; inset:2px; background:var(--orange); border-radius:50%; transform:scale(0); transition:transform var(--transition-medium); }
+    .journey-step:hover .step-dot,.journey-step.active .step-dot { border-color:var(--orange); }
+    .journey-step:hover .step-dot::after,.journey-step.active .step-dot::after { transform:scale(1); }
+    .step-label { font-family:var(--font-body); font-size:0.85rem; font-weight:600; color:var(--text-primary); margin-bottom:0.25rem; }
+    .step-desc { font-size:0.75rem; color:var(--text-muted); max-width:140px; margin:0 auto; line-height:1.5; }
+    .education-timeline { position:relative; padding-left:2rem; }
+    .education-timeline::before { content:''; position:absolute; left:0; top:0; bottom:0; width:1px; background:var(--border); }
+    .timeline-item { position:relative; padding-bottom:3rem; padding-left:2rem; }
+    .timeline-item:last-child { padding-bottom:0; }
+    .timeline-item::before { content:''; position:absolute; left:-2rem; top:0.5rem; width:9px; height:9px; background:var(--white); border:2px solid var(--orange); border-radius:50%; transform:translateX(-4px); }
+    .timeline-item:hover::before { background:var(--orange); }
+    .timeline-content h4 { font-family:var(--font-body); font-size:1.1rem; font-weight:600; margin-bottom:0.25rem; }
+    .timeline-content .institution { font-size:0.9rem; color:var(--text-secondary); margin-bottom:0.25rem; }
+    .timeline-content .duration { font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted); margin-bottom:0.5rem; display:block; }
+    .timeline-content .grade { display:inline-block; font-size:0.8rem; font-weight:600; color:var(--orange); background:var(--orange-pale); padding:0.3rem 0.75rem; border:1px solid rgba(232,111,24,0.2); }
+    .certs-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; }
+    .cert-card { background:var(--white); border:1px solid var(--border); padding:1.5rem; transition:all var(--transition-medium); display:flex; align-items:flex-start; gap:1rem; }
+    .cert-card:hover { border-color:var(--orange); transform:translateX(4px); }
+    .cert-icon { width:36px; height:36px; background:var(--orange-pale); border:1px solid rgba(232,111,24,0.2); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .cert-icon svg { width:18px; height:18px; color:var(--orange); }
+    .cert-info h4 { font-family:var(--font-body); font-size:0.9rem; font-weight:600; margin-bottom:0.25rem; line-height:1.4; }
+    .cert-info p { font-size:0.8rem; color:var(--text-muted); }
+    .achievement-block { background:var(--white); border:1px solid var(--border); padding:3rem; text-align:center; position:relative; overflow:hidden; }
+    .achievement-block::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--orange),var(--orange-light)); }
+    .achievement-block .trophy { font-size:2.5rem; margin-bottom:1rem; }
+    .achievement-block h3 { font-family:var(--font-body); font-size:1.25rem; font-weight:600; margin-bottom:0.75rem; }
+    .achievement-block p { color:var(--text-secondary); max-width:500px; margin:0 auto; line-height:1.7; }
+    .personal-grid { display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
+    .personal-col h4 { font-family:var(--font-body); font-size:0.85rem; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted); margin-bottom:1rem; }
+    .personal-tags { display:flex; flex-wrap:wrap; gap:0.6rem; }
+    .personal-tag { font-size:0.85rem; padding:0.5rem 1rem; background:var(--white); border:1px solid var(--border); color:var(--text-secondary); transition:all var(--transition-fast); }
+    .personal-tag:hover { border-color:var(--orange); color:var(--orange); background:var(--orange-pale); }
+    .contact-section { text-align:center; padding:10rem 3rem; }
+    .contact-section h2 { font-size:clamp(2.5rem,5vw,4rem); margin-bottom:1rem; }
+    .contact-section > p { font-size:1.1rem; color:var(--text-secondary); margin-bottom:3rem; max-width:500px; margin-left:auto; margin-right:auto; }
+    .contact-links { display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-bottom:3rem; }
+    .contact-link { display:inline-flex; align-items:center; gap:0.75rem; padding:1rem 2rem; background:var(--white); border:1px solid var(--border); color:var(--text-primary); text-decoration:none; font-size:0.9rem; font-weight:500; transition:all var(--transition-medium); }
+    .contact-link:hover { border-color:var(--orange); background:var(--orange-pale); color:var(--orange); transform:translateY(-3px); }
+    .contact-link svg { width:18px; height:18px; }
+    footer { padding:3rem; border-top:1px solid var(--border); }
+    .footer-inner { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+    .footer-brand { font-family:var(--font-display); font-size:1rem; font-weight:600; }
+    .footer-tagline { font-size:0.8rem; color:var(--text-muted); }
+    .footer-links { display:flex; gap:1.5rem; }
+    .footer-links a { font-size:0.8rem; color:var(--text-muted); text-decoration:none; transition:color var(--transition-fast); }
+    .footer-links a:hover { color:var(--orange); }
+    .footer-copy { font-size:0.75rem; color:var(--text-muted); }
+    .section-divider { height:1px; background:var(--border); margin:0 3rem; }
+    .mobile-nav { display:none; position:fixed; inset:0; background:var(--bg); z-index:99; padding:6rem 2rem 2rem; flex-direction:column; gap:1.5rem; }
+    .mobile-nav.active { display:flex; }
+    .mobile-nav a { font-family:var(--font-display); font-size:1.5rem; color:var(--text-primary); text-decoration:none; padding:0.5rem 0; border-bottom:1px solid var(--border); }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; } html { scroll-behavior:auto; } }
+    @media (max-width:1024px) { .hero-inner { grid-template-columns:1fr; gap:3rem; } .hero-visual { height:400px; order:-1; } .about-grid { grid-template-columns:1fr; gap:3rem; } .project-item { grid-template-columns:1fr; gap:2rem; } .project-item:nth-child(even) { direction:ltr; } .skills-container { grid-template-columns:1fr; } .journey-steps { flex-direction:column; gap:2rem; } .journey-line { display:none; } .personal-grid { grid-template-columns:1fr; } }
+    @media (max-width:768px) { nav { padding:1rem 1.5rem; } nav.scrolled { padding:0.75rem 1.5rem; } .nav-links { display:none; } .mobile-menu-btn { display:block; } section { padding:5rem 1.5rem; } .hero { padding:6rem 1.5rem 3rem; } .hero-name { font-size:2.5rem; } .hero-buttons { flex-direction:column; } .contact-links { flex-direction:column; align-items:center; } .contact-link { width:100%; max-width:300px; justify-content:center; } .footer-inner { flex-direction:column; text-align:center; } }
+  </style>
+</head>
+<body>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">Riyas Khan K S</a>
+      <ul class="nav-links">
+        <li><a href="#home" aria-label="Go to Home section">Home</a></li>
+        <li><a href="#about" aria-label="Go to About section">About</a></li>
+        <li><a href="#work" aria-label="Go to Projects section">Work</a></li>
+        <li><a href="#skills" aria-label="Go to Skills section">Skills</a></li>
+        <li><a href="#bring" aria-label="Go to What I Bring section">What I Bring</a></li>
+        <li><a href="#contact" aria-label="Go to Contact section">Contact</a></li>
+      </ul>
+      <div class="nav-status"><span class="status-dot" aria-hidden="true"></span><span>Available for opportunities</span></div>
+      <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()"><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#home" onclick="toggleMobileMenu()">Home</a>
+    <a href="#about" onclick="toggleMobileMenu()">About</a>
+    <a href="#work" onclick="toggleMobileMenu()">Work</a>
+    <a href="#skills" onclick="toggleMobileMenu()">Skills</a>
+    <a href="#bring" onclick="toggleMobileMenu()">What I Bring</a>
+    <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+  </div>
+  <header>
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-label"><span class="line"></span><span class="label">Portfolio 2026</span></div>
+        <p class="hero-name">Riyas Khan K S</p>
+        <h1 class="hero-title" style="margin-bottom:0.5rem;">SQL Server DBA | Junior Database Administrator</h1>
+        <p class="hero-statement">Building <span class="accent">secure, reliable</span> & performance-focused database systems.</p>
+        <p class="hero-desc">I work with Microsoft SQL Server and T-SQL, exploring database administration, database security, backup and recovery, performance monitoring, SQL Server troubleshooting, and reliable data systems. Building hands-on SQL Server DBA projects to strengthen my foundation in database management.</p>
+        <div class="hero-buttons">
+          <a href="#work" class="btn btn-primary">Explore My Work</a>
+          <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+        </div>
+        <div class="hero-social">
+          <a href="https://github.com/RiyasKhan-ks" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/riyaskhan-ks" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Abstract database architecture visualization with connected nodes and data grids">
+        <div class="abstract-visual">
+          <div class="data-grid"></div>
+          <div class="central-geometry"></div>
+          <div class="floating-label">SELECT * FROM Performance</div>
+          <div class="floating-label">DBCC CHECKDB</div>
+          <div class="floating-label">BACKUP DATABASE</div>
+          <div class="floating-label">CREATE INDEX</div>
+          <div class="floating-label">Security = ON</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true"><span>Scroll</span><div class="scroll-line"></div></div>
+  </section>
+</header>
+<main>
+  <div class="section-divider"></div>
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-header reveal"><span class="label">About</span><h2>A little about me.</h2></div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I'm <strong>Riyas Khan K S</strong>, an aspiring SQL Server DBA and Junior Database Administrator currently pursuing my <strong>B.Tech in Computer Science and Business Systems</strong> at Francis Xavier Engineering College, Tirunelveli.</p>
+          <p>My journey into SQL Server database administration started with a genuine curiosity about how data is organized, secured, and optimized. Today, I spend my time working with <strong>Microsoft SQL Server</strong> and <strong>SQL Server Management Studio (SSMS)</strong>, writing <strong>T-SQL</strong> queries and stored procedures, and learning the fundamentals of professional database administration.</p>
+          <p>I'm particularly interested in database security, SQL Server backup & recovery strategies, performance monitoring using DMVs and execution plans, and systematic troubleshooting. Every SQL Server project I build is an opportunity to deepen my understanding of how reliable data systems work.</p>
+        </div>
+        <div class="reveal">
+          <div class="about-highlight"><span class="label">Education</span><h4>B.Tech – Computer Science and Business Systems</h4><p>Francis Xavier Engineering College, Tirunelveli</p></div>
+          <div class="about-meta">
+            <div class="meta-item"><span class="label">Duration</span><p>2024 – 2028</p></div>
+            <div class="meta-item"><span class="label">CGPA</span><p>7.6 / 10</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+  <section id="skills">
+    <div class="section-inner">
+      <div class="section-header reveal"><span class="label">Expertise</span><h2>What I work with.</h2><p style="color:var(--text-secondary);margin-top:1rem;max-width:600px;">Technologies and concepts I use in my SQL Server DBA projects and database administration learning.</p></div>
+      <div class="skills-container">
+        <div class="skill-group reveal">
+          <h4><span class="num">01</span> SQL Server</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Microsoft SQL Server</span>
+            <span class="skill-tag">SSMS</span>
+            <span class="skill-tag">T-SQL</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h4><span class="num">02</span> Database Administration</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Backup & Recovery</span>
+            <span class="skill-tag">Database Security</span>
+            <span class="skill-tag">Users & Roles</span>
+            <span class="skill-tag">Permissions</span>
+            <span class="skill-tag">DBCC CHECKDB</span>
+            <span class="skill-tag">Database Maintenance</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h4><span class="num">03</span> Performance</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Indexes</span>
+            <span class="skill-tag">Statistics</span>
+            <span class="skill-tag">Execution Plans</span>
+            <span class="skill-tag">DMVs</span>
+            <span class="skill-tag">Monitoring</span>
+            <span class="skill-tag">Troubleshooting</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h4><span class="num">04</span> SQL</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Joins</span>
+            <span class="skill-tag">Subqueries</span>
+            <span class="skill-tag">CTEs</span>
+            <span class="skill-tag">Views</span>
+            <span class="skill-tag">Stored Procedures</span>
+            <span class="skill-tag">Transactions</span>
+            <span class="skill-tag">Constraints</span>
+            <span class="skill-tag">CRUD</span>
+          </div>
+        </div>
+        <div class="skill-group reveal" style="grid-column:1/-1;">
+          <h4><span class="num">05</span> Tools</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">VS Code</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+  <section id="work">
+    <div class="section-inner">
+      <div class="section-header reveal"><span class="label">Selected Work</span><h2>Projects that shaped my learning.</h2></div>
+      <div class="projects-list">
+        <article class="project-item reveal">
+          <div class="project-visual">
+            <span class="project-number">01</span>
+            <div class="project-visual-inner">
+              <svg width="100%" height="100%" viewBox="0 0 400 300" fill="none" style="opacity:0.6" alt="E-Commerce SQL Server database project diagram showing related tables and data relationships">
+                <rect x="40" y="40" width="140" height="100" rx="2" stroke="#E5E5E0" stroke-width="1.5"/>
+                <rect x="50" y="55" width="80" height="6" rx="1" fill="#E86F18" opacity="0.3"/>
+                <rect x="50" y="70" width="120" height="4" rx="1" fill="#E5E5E0"/><rect x="50" y="82" width="100" height="4" rx="1" fill="#E5E5E0"/><rect x="50" y="94" width="110" height="4" rx="1" fill="#E5E5E0"/><rect x="50" y="106" width="90" height="4" rx="1" fill="#E5E5E0"/>
+                <rect x="220" y="40" width="140" height="100" rx="2" stroke="#E5E5E0" stroke-width="1.5"/>
+                <rect x="230" y="55" width="80" height="6" rx="1" fill="#E86F18" opacity="0.3"/>
+                <rect x="230" y="70" width="120" height="4" rx="1" fill="#E5E5E0"/><rect x="230" y="82" width="100" height="4" rx="1" fill="#E5E5E0"/><rect x="230" y="94" width="110" height="4" rx="1" fill="#E5E5E0"/><rect x="230" y="106" width="90" height="4" rx="1" fill="#E5E5E0"/>
+                <line x1="180" y1="90" x2="220" y2="90" stroke="#E86F18" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+                <rect x="130" y="170" width="140" height="90" rx="2" stroke="#E86F18" stroke-width="1.5" fill="none" opacity="0.4"/>
+                <rect x="140" y="185" width="80" height="6" rx="1" fill="#E86F18" opacity="0.3"/>
+                <rect x="140" y="200" width="120" height="4" rx="1" fill="#E5E5E0"/><rect x="140" y="212" width="100" height="4" rx="1" fill="#E5E5E0"/><rect x="140" y="224" width="110" height="4" rx="1" fill="#E5E5E0"/>
+                <line x1="90" y1="140" x2="130" y2="170" stroke="#E86F18" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+                <line x1="290" y1="140" x2="270" y2="170" stroke="#E86F18" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="label">Project 01</span>
+            <h3>E-Commerce Database Administration & Performance Management</h3>
+            <p>Designed and administered an E-Commerce SQL Server database with security roles, users, permissions, SQL Server backup and recovery strategies, indexes, statistics, and database maintenance plans.</p>
+            <p style="font-size:0.85rem">Used T-SQL, DBCC CHECKDB, SQL Server statistics, and DMVs for performance monitoring, SQL Server troubleshooting, and database administration. Analyzed database performance using execution plans, SQL Server indexes, and statistics to optimize query performance.</p>
+            <div class="project-tech">
+              <span>Microsoft SQL Server</span><span>T-SQL</span><span>DBCC CHECKDB</span><span>DMVs</span><span>Indexes</span><span>Execution Plans</span>
+            </div>
+            <a href="https://github.com/RiyasKhan-ks/ecommerce-database-sql-server" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View E-Commerce SQL Server Database Project on GitHub">
+              View E-Commerce SQL Server Project
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+        <article class="project-item reveal">
+          <div class="project-visual">
+            <span class="project-number">02</span>
+            <div class="project-visual-inner">
+              <svg width="100%" height="100%" viewBox="0 0 400 300" fill="none" style="opacity:0.6">
+                <rect x="80" y="50" width="240" height="200" rx="2" stroke="#E5E5E0" stroke-width="1.5"/>
+                <rect x="100" y="70" width="120" height="6" rx="1" fill="#E86F18" opacity="0.3"/>
+                <rect x="100" y="90" width="200" height="4" rx="1" fill="#E5E5E0"/><rect x="100" y="104" width="180" height="4" rx="1" fill="#E5E5E0"/><rect x="100" y="118" width="190" height="4" rx="1" fill="#E5E5E0"/>
+                <rect x="100" y="145" width="200" height="1" fill="#E5E5E0"/>
+                <rect x="100" y="160" width="60" height="4" rx="1" fill="#E86F18" opacity="0.4"/>
+                <rect x="100" y="175" width="200" height="4" rx="1" fill="#E5E5E0"/><rect x="100" y="189" width="180" height="4" rx="1" fill="#E5E5E0"/><rect x="100" y="203" width="150" height="4" rx="1" fill="#E5E5E0"/>
+                <circle cx="320" cy="230" r="14" stroke="#E86F18" stroke-width="1.5" fill="none" opacity="0.4"/>
+                <text x="320" y="235" text-anchor="middle" fill="#E86F18" font-size="10" font-family="monospace" opacity="0.6">ID</text>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="label">Project 02</span>
+            <h3>Student Database Management System</h3>
+            <p>Developed a student database using Microsoft SQL Server with tables, constraints, CRUD operations, SQL joins, views, and T-SQL stored procedures for structured data management.</p>
+            <p style="font-size:0.85rem">Implemented SQL Server T-SQL queries to manage and retrieve student information efficiently. Applied database constraints and stored procedures for structured data management and data integrity.</p>
+            <div class="project-tech">
+              <span>Microsoft SQL Server</span><span>T-SQL</span><span>CRUD</span><span>Joins</span><span>Views</span><span>Stored Procedures</span><span>Constraints</span>
+            </div>
+            <a href="https://github.com/RiyasKhan-ks/Student-Database-Management-System" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Student Database Management System Project on GitHub">
+              View Student Database Project
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+        <article class="project-item reveal">
+          <div class="project-visual">
+            <span class="project-number">03</span>
+            <div class="project-visual-inner">
+              <svg width="100%" height="100%" viewBox="0 0 400 300" fill="none" style="opacity:0.6">
+                <rect x="120" y="60" width="160" height="180" rx="4" stroke="#E5E5E0" stroke-width="1.5"/>
+                <rect x="140" y="80" width="120" height="8" rx="2" fill="#E86F18" opacity="0.2"/>
+                <rect x="140" y="105" width="100" height="4" rx="1" fill="#E5E5E0"/><rect x="140" y="118" width="80" height="4" rx="1" fill="#E5E5E0"/><rect x="140" y="131" width="110" height="4" rx="1" fill="#E5E5E0"/>
+                <rect x="140" y="155" width="120" height="1" fill="#E5E5E0"/>
+                <rect x="140" y="170" width="60" height="4" rx="1" fill="#E86F18" opacity="0.3"/>
+                <rect x="140" y="185" width="100" height="4" rx="1" fill="#E5E5E0"/><rect x="140" y="198" width="90" height="4" rx="1" fill="#E5E5E0"/>
+                <circle cx="200" cy="40" r="20" stroke="#E86F18" stroke-width="1" fill="none" opacity="0.3"/>
+                <rect x="190" y="35" width="20" height="10" rx="2" stroke="#E86F18" stroke-width="1" fill="none" opacity="0.4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="label">Project 03</span>
+            <h3>ATM Database Management System</h3>
+            <p>Developed an ATM database using Microsoft SQL Server with tables, constraints, T-SQL stored procedures, and SQL queries to manage customer accounts and financial transactions securely.</p>
+            <p style="font-size:0.85rem">Implemented database operations for balance enquiry, cash withdrawal, cash deposit, PIN validation, and transaction history.</p>
+            <div class="project-tech">
+              <span>Microsoft SQL Server</span><span>T-SQL</span><span>Stored Procedures</span><span>Constraints</span><span>Transactions</span>
+            </div>
+            <span class="project-badge">Academic / Simulated Project</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+  <section id="code">
+    <div class="section-inner">
+      <div class="section-header reveal"><span class="label">Under the Hood</span><h2>A glimpse into my SQL.</h2><p style="color:var(--text-secondary);margin-top:1rem;max-width:600px;">Sample T-SQL code from my SQL Server DBA projects demonstrating joins, stored procedures, transactions, indexes, and database maintenance.</p></div>
+      <div class="code-grid">
+        <div class="code-block reveal">
+          <div class="code-header"><span>JOIN Query</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+          <div class="code-content"><span class="code-keyword">SELECT</span> o.OrderID, c.CustomerName, o.OrderDate
+<span class="code-keyword">FROM</span> Orders o
+<span class="code-keyword">INNER JOIN</span> Customers c <span class="code-keyword">ON</span> o.CustomerID = c.CustomerID
+<span class="code-keyword">WHERE</span> o.OrderDate >= <span class="code-string">'2024-01-01'</span>
+<span class="code-keyword">ORDER BY</span> o.OrderDate <span class="code-keyword">DESC</span>;</div>
+        </div>
+        <div class="code-block reveal">
+          <div class="code-header"><span>Stored Procedure</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+          <div class="code-content"><span class="code-keyword">CREATE PROCEDURE</span> <span class="code-function">usp_GetCustomerOrders</span>
+  @CustomerID <span class="code-keyword">INT</span>
+<span class="code-keyword">AS</span>
+<span class="code-keyword">BEGIN</span>
+  <span class="code-keyword">SELECT</span> * <span class="code-keyword">FROM</span> Orders
+  <span class="code-keyword">WHERE</span> CustomerID = @CustomerID;
+<span class="code-keyword">END</span>;</div>
+        </div>
+        <div class="code-block reveal">
+          <div class="code-header"><span>Transaction</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+          <div class="code-content"><span class="code-keyword">BEGIN TRANSACTION</span>;
+<span class="code-keyword">UPDATE</span> Accounts <span class="code-keyword">SET</span> Balance -= <span class="code-number">1000</span>
+<span class="code-keyword">WHERE</span> AccountID = <span class="code-number">1</span>;
+<span class="code-keyword">UPDATE</span> Accounts <span class="code-keyword">SET</span> Balance += <span class="code-number">1000</span>
+<span class="code-keyword">WHERE</span> AccountID = <span class="code-number">2</span>;
+<span class="code-keyword">COMMIT</span>;</div>
+        </div>
+        <div class="code-block reveal">
+          <div class="code-header"><span>Index Creation</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+          <div class="code-content"><span class="code-keyword">CREATE NONCLUSTERED INDEX</span>
+<span class="code-function">IX_Orders_CustomerID</span>
+<span class="code-keyword">ON</span> Orders(CustomerID)
+<span class="code-keyword">INCLUDE</span> (OrderDate, TotalAmount);
+<span class="code-comment">-- Optimizes customer order lookups</span></div>
+        </div>
+        <div class="code-block reveal">
+          <div class="code-header"><span>SELECT with CTE</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+          <div class="code-content"><span class="code-keyword">WITH</span> TopCustomers <span class="code-keyword">AS</span> (
+  <span class="code-keyword">SELECT</span> CustomerID, <span class="code-function">SUM</span>(Total) <span class="code-keyword">AS</span> Revenue
+  <span class="code-keyword">FROM</span> Orders
+  <span class="code-keyword">GROUP BY</span> CustomerID
+)
+<span class="code-keyword">SELECT</span> * <span class="code-keyword">FROM</span> TopCustomers
+<span class="code-keyword">WHERE</span> Revenue > <span class="code-number">50000</span>;</div>
+        </div>
+        <div class="code-block reveal">
+          <div class="code-header"><span>Database Maintenance</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+          <div class="code-content"><span class="code-comment">-- Integrity check</span>
+<span class="code-function">DBCC CHECKDB</span>(<span class="code-string">'ECommerceDB'</span>);
+<span class="code-comment">-- Update statistics</span>
+<span class="code-keyword">UPDATE STATISTICS</span> Orders;
+<span class="code-comment">-- Rebuild fragmented indexes</span>
+<span class="code-keyword">ALTER INDEX</span> <span class="code-keyword">ALL</span> <span class="code-keyword">ON</span> Orders <span class="code-keyword">REBUILD</span>;</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+  <section id="bring">
+    <div class="section-inner">
+      <div class="section-header reveal"><span class="label">Strengths</span><h2>What I bring.</h2></div>
+      <div class="skills-container">
+        <div class="skill-group reveal">
+          <h4><span class="num">01</span> SQL Server & T-SQL</h4>
+          <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem;">Hands-on experience with Microsoft SQL Server, SQL Server Management Studio (SSMS), and T-SQL development for building and querying relational databases.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Microsoft SQL Server</span>
+            <span class="skill-tag">SSMS</span>
+            <span class="skill-tag">T-SQL</span>
+            <span class="skill-tag">SQL Development</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h4><span class="num">02</span> Database Administration</h4>
+          <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem;">Practical knowledge of database security, user roles, permissions, backup and recovery strategies, and routine database maintenance tasks.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Database Security</span>
+            <span class="skill-tag">Users & Roles</span>
+            <span class="skill-tag">Permissions</span>
+            <span class="skill-tag">Backup & Recovery</span>
+            <span class="skill-tag">Database Maintenance</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h4><span class="num">03</span> Performance & Troubleshooting</h4>
+          <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem;">Exploring SQL Server performance tuning through indexes, statistics, execution plans, DMVs, and systematic troubleshooting approaches.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Indexes</span>
+            <span class="skill-tag">Statistics</span>
+            <span class="skill-tag">Execution Plans</span>
+            <span class="skill-tag">DMVs</span>
+            <span class="skill-tag">Performance Monitoring</span>
+            <span class="skill-tag">Troubleshooting</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h4><span class="num">04</span> Project Experience</h4>
+          <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem;">Built multiple SQL Server databases through academic and personal projects, applying real-world database administration and development concepts.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">SQL Server Projects</span>
+            <span class="skill-tag">Database Design</span>
+            <span class="skill-tag">Academic Projects</span>
+            <span class="skill-tag">Personal Projects</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+  <section id="education">
+    <div class="section-inner">
+      <div class="section-header reveal"><span class="label">Background</span><h2>Education.</h2><p style="color:var(--text-secondary);margin-top:1rem;max-width:600px;">Academic foundation supporting my path as a Junior SQL Server DBA and database administrator.</p></div>
+      <div class="education-timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <h4>B.Tech – Computer Science and Business Systems</h4>
+            <p class="institution">Francis Xavier Engineering College, Tirunelveli</p>
+            <span class="duration">2024 – 2028</span>
+            <span class="grade">CGPA: 7.6 / 10</span>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <h4>Higher Secondary Certificate (HSC)</h4>
+            <p class="institution">Time Matric Higher Secondary School</p>
+            <span class="grade">76.33%</span>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <h4>Secondary School Leaving Certificate (SSLC)</h4>
+            <p class="institution">Time Matric Higher Secondary School</p>
+            <span class="grade">70.00%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+  <section id="certifications">
+    <div class="section-inner">
+      <div class="section-header reveal"><span class="label">Credentials</span><h2>Certifications.</h2><p style="color:var(--text-secondary);margin-top:1rem;max-width:600px;">Professional certifications complementing my SQL Server DBA and database administration learning journey.</p></div>
+      <div class="certs-grid">
+        <div class="cert-card reveal">
+          <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <div class="cert-info"><h4>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</h4><p>Oracle</p></div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 12h16M12 4v16"/></svg></div>
+          <div class="cert-info"><h4>NPTEL – Internet of Things</h4><p>IIT / NPTEL</p></div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div class="cert-info"><h4>NPTEL – Leadership and Team Effectiveness</h4><p>IIT / NPTEL</p></div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <div class="cert-info"><h4>Udemy – Java, Python, and C (Basics)</h4><p>Udemy</p></div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+  <section id="personal">
+    <div class="section-inner">
+      <div class="section-header reveal"><span class="label">More About Me</span><h2>Personal details.</h2></div>
+      <div class="personal-grid">
+        <div class="personal-col reveal">
+          <h4>Soft Skills</h4>
+          <div class="personal-tags">
+            <span class="personal-tag">Decision Making</span>
+            <span class="personal-tag">Quick Learner</span>
+            <span class="personal-tag">Teamwork</span>
+            <span class="personal-tag">Time Management</span>
+          </div>
+        </div>
+        <div class="personal-col reveal">
+          <h4>Languages</h4>
+          <div class="personal-tags">
+            <span class="personal-tag">Tamil</span>
+            <span class="personal-tag">English</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+  <div class="section-divider"></div>
+  <section class="contact-section" id="contact">
+    <div class="section-inner">
+      <div class="reveal">
+        <span class="label" style="margin-bottom:1.5rem;display:block;">Get in Touch</span>
+        <h2>Let's build something meaningful.</h2>
+        <p>Interested in SQL Server database administration, entry-level SQL Server DBA roles, or collaborating on database projects? Let's connect.</p>
+        <div class="contact-links">
+          <a href="mailto:riyaskhan.ks@example.com" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
+          </a>
+          <a href="tel:+919876543210" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Phone
+          </a>
+          <a href="https://linkedin.com/in/riyaskhan-ks" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/RiyasKhan-ks" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Riyas Khan K S</div>
+        <div class="footer-tagline">SQL Server DBA | Junior Database Administrator</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/RiyasKhan-ks" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/riyaskhan-ks" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:riyaskhan.ks@example.com">Email</a>
+      </div>
+      <div class="footer-copy">&copy; 2026 Riyas Khan K S</div>
+    </div>
+  </footer>
+
+  <script>
+    // Custom Cursor
+    const cursor = document.querySelector('.cursor');
+    const cursorDot = document.querySelector('.cursor-dot');
+    let mouseX = 0, mouseY = 0, cursorX = 0, cursorY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursorDot.style.left = mouseX + 'px';
+      cursorDot.style.top = mouseY + 'px';
+    });
+
+    function animateCursor() {
+      cursorX += (mouseX - cursorX) * 0.15;
+      cursorY += (mouseY - cursorY) * 0.15;
+      cursor.style.left = cursorX + 'px';
+      cursor.style.top = cursorY + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    document.querySelectorAll('a, button, .skill-tag, .project-item, .code-block, .cert-card').forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+    });
+
+    // Navigation scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile menu
+    function toggleMobileMenu() {
+      document.getElementById('mobileNav').classList.toggle('active');
+    }
+
+    // Scroll reveal
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Journey progress animation
+    const journeyTrack = document.querySelector('.journey-track');
+    if (journeyTrack) {
+      const journeyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            document.getElementById('journeyProgress').style.width = '100%';
+            journeyObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      journeyObserver.observe(journeyTrack);
+    }
+
+    // Copy code functionality
+    function copyCode(btn) {
+      const code = btn.closest('.code-block').querySelector('.code-content').innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        const original = btn.innerText;
+        btn.innerText = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.innerText = original; btn.classList.remove('copied'); }, 2000);
+      });
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Hero parallax effect for floating labels
+    const heroVisual = document.querySelector('.hero-visual');
+    const floatingLabels = document.querySelectorAll('.floating-label');
+
+    if (heroVisual && !window.matchMedia('(pointer: coarse)').matches) {
+      heroVisual.addEventListener('mousemove', (e) => {
+        const rect = heroVisual.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+        floatingLabels.forEach((label, i) => {
+          const speed = (i + 1) * 8;
+          label.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+        });
+      });
+    }
+  </script>
+</body>
+</html>
